@@ -1,0 +1,9 @@
+FLASK_APP=Application.py
+FLASK_DEBUG=1
+FLASK_ENV=development
+
+MAIL_SERVER=localhost
+MAIL_PORT=8025
+MAIL_USE_TLS=1
+MAIL_USERNAME=test@example.com
+MAIL_PASSWORD=test1234
