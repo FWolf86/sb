@@ -1,7 +1,7 @@
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, BooleanField, SubmitField, TextAreaField
 from wtforms.validators import ValidationError, DataRequired, Email, EqualTo, Length
-from _stamboom.app.Models import User
+from app.Models import User
 
 class LoginForm(FlaskForm):
     username = StringField('Username', validators=[DataRequired()])
