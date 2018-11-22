@@ -1,5 +1,0 @@
-/logs
-/venv
-.flaskenv
-app.db
-smtp_server.py
