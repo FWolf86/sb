@@ -1,5 +1,5 @@
 FLASK_APP=Application.py
-FLASK_DEBUG=1
+FLASK_DEBUG=0
 FLASK_ENV=development
 
 MAIL_SERVER=localhost

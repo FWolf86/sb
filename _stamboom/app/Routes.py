@@ -1,8 +1,8 @@
 from flask import render_template, flash, redirect, url_for, request
-from app import app, db
-from app.Forms import LoginForm, RegistrationForm, EditProfileForm
+from _stamboom.app import app, db
+from _stamboom.app.Forms import LoginForm, RegistrationForm, EditProfileForm
 from flask_login import current_user, login_user, logout_user, login_required
-from app.Models import User
+from _stamboom.app.Models import User
 from werkzeug.urls import url_parse
 from datetime import datetime
 

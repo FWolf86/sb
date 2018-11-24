@@ -1,5 +1,5 @@
-from app import app, db
-from app.Models import User, Post
+from _stamboom.app import app, db
+from _stamboom.app.Models import User, Post
 
 @app.shell_context_processor
 def make_shell_context():

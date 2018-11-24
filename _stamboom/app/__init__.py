@@ -1,5 +1,5 @@
 from flask import Flask
-from Config import Config
+from _stamboom.Config import Config
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager
 from flask_migrate import Migrate
@@ -16,7 +16,7 @@ login = LoginManager(app)
 login = LoginManager(app)
 login.login_view = 'login'
 
-from app import Routes, Models, Errors
+from _stamboom.app import Routes, Models, Errors
 
 if app.config['MAIL_SERVER']:
     auth = None
