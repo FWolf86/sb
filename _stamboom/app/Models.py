@@ -40,3 +40,18 @@ class Post(db.Model):
 
     def __repr__(self):
         return '<Post {}>'.format(self.body)
+
+class Person(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    gender = db.Column(db.String(140))
+    dob = db.Column(db.DateTime)
+    name = db.Column(db.String(140))
+    parents = db.relationship('Post', backref='author', lazy='dynamic')
+
+class ParentChildRelationship(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    parent = db.Column(db.Integer, db.ForeignKey('person.id'))
+    child = db.Column(db.Integer, db.ForeignKey('person.id'))
+
+    parent = db.relationship(Person, backref=db.backref("orders", cascade="all, delete-orphan"))
+    child = db.relationship(Person, backref=db.backref("orders", cascade="all, delete-orphan"))
